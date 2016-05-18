@@ -3,18 +3,18 @@ package com.models;
 /**
  * Created by echavez on 5/18/16.
  */
-public abstract class SeleccionFutbol {
+public abstract class FutbolTeam {
 
     protected int id;
     protected String nombre;
     protected String apellidos;
     protected int edad;
 
-    public SeleccionFutbol(){
+    public FutbolTeam(){
 
     }
 
-    public SeleccionFutbol(int id, String nombre, String apellidos, int edad){
+    public FutbolTeam(int id, String nombre, String apellidos, int edad){
 
         this.id = id;
         this.nombre = nombre;
@@ -23,15 +23,15 @@ public abstract class SeleccionFutbol {
 
     }
 
-    public void concentrarse(){
-        System.out.println("Concentrarce (Clase padre)");
+    public void focus(){
+        System.out.println("Focus (Super class)");
     }
 
-    public void viajar(){
-        System.out.println("Viajar (Clase padre)");
+    public void travel(){
+        System.out.println("Travel (Super class)");
     }
 
-    public abstract void entrenamiento();
+    public abstract void training();
 
     public int getId() {
         return id;
@@ -41,7 +41,7 @@ public abstract class SeleccionFutbol {
         this.id = id;
     }
 
-    public String getNombre() {
+    public String getName() {
         return nombre;
     }
 
@@ -49,7 +49,7 @@ public abstract class SeleccionFutbol {
         this.nombre = nombre;
     }
 
-    public String getApellidos() {
+    public String getLastName() {
         return apellidos;
     }
 

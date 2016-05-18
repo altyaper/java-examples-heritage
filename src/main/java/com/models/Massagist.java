@@ -3,21 +3,21 @@ package com.models;
 /**
  * Created by echavez on 5/18/16.
  */
-public class Masajista extends SeleccionFutbol{
+public class Massagist extends FutbolTeam {
 
 
     private String titulacion;
     private int aniosExperiencia;
 
-    public Masajista(){
+    public Massagist(){
         super();
     }
 
-    public void entrenamiento() {
-        System.out.println("Entrenamiento del Masajiste");
+    public void training() {
+        System.out.println("Massage guy training");
     }
 
-    public Masajista(int id, String nombre, String apellidos, int edad, String titulacion, int aniosExperiencia){
+    public Massagist(int id, String nombre, String apellidos, int edad, String titulacion, int aniosExperiencia){
 
         this.id = id;
         this.nombre = nombre;
@@ -28,8 +28,8 @@ public class Masajista extends SeleccionFutbol{
 
     }
 
-    public void darMasaje(){
-        System.out.println("Da masaje");
+    public void giveAMassage(){
+        System.out.println("Give a massage");
     }
 
 }

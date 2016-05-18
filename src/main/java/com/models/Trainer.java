@@ -3,22 +3,22 @@ package com.models;
 /**
  * Created by echavez on 5/18/16.
  */
-public class Entrenador extends SeleccionFutbol{
+public class Trainer extends FutbolTeam {
 
     private String idFederacion;
 
-    public Entrenador(){
+    public Trainer(){
         super();
     }
 
 
-    public void entrenamiento() {
+    public void training() {
 
-        System.out.println("Entrenamiento de Entrenador");
+        System.out.println("Entrenamiento de Trainer");
 
     }
 
-    public Entrenador(int id, String nombre, String apellidos, int edad, String idFederacion){
+    public Trainer(int id, String nombre, String apellidos, int edad, String idFederacion){
 
         this.id = id;
         this.nombre = nombre;
@@ -28,11 +28,11 @@ public class Entrenador extends SeleccionFutbol{
 
     }
 
-    public void dirigirPartido(){
+    public void driveTheMatch(){
         System.out.println("Dirige el partido");
     }
 
-    public void dirigirEntrenamiento() {
+    public void driveTheTrainment() {
         System.out.println("Dirige el Entrenamiento");
     }
 

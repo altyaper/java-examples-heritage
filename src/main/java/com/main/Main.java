@@ -1,9 +1,9 @@
 package com.main;
 
-import com.models.Entrenador;
-import com.models.Futbolista;
-import com.models.Masajista;
-import com.models.SeleccionFutbol;
+import com.models.Trainer;
+import com.models.SoccerPlayer;
+import com.models.Massagist;
+import com.models.FutbolTeam;
 
 import java.util.ArrayList;
 
@@ -14,55 +14,55 @@ import static java.lang.System.out;
  */
 public class Main {
 
-    public static ArrayList<SeleccionFutbol> integrantes = new ArrayList<SeleccionFutbol>();
+    public static ArrayList<FutbolTeam> team = new ArrayList<FutbolTeam>();
 
     public static void main(String args[]){
 
-        Entrenador delBosque = new Entrenador(1,"Vicente", "Del Bosque", 60, "284EZ89");
-        Futbolista iniesta = new Futbolista(2, "Andres", "Iniesta", 29, 6, "Interior Derecho");
-        Masajista raulMartinez = new Masajista(3, "Raul", "Martinez", 41, "Licenciado en Fisioterapia",18);
+        Trainer delBosque = new Trainer(1,"Vicente", "Del Bosque", 60, "284EZ89");
+        SoccerPlayer iniesta = new SoccerPlayer(2, "Andres", "Iniesta", 29, 6, "Interior Derecho");
+        Massagist raulMartinez = new Massagist(3, "Raul", "Martinez", 41, "Licenciado en Fisioterapia",18);
 
-        integrantes.add(delBosque);
-        integrantes.add(iniesta);
-        integrantes.add(raulMartinez);
+        team.add(delBosque);
+        team.add(iniesta);
+        team.add(raulMartinez);
 
-        //CONCENTRARSE
-        out.println("Todos los integrantes comienzan una concentracion. (Todos ejecutan el mismo metodo)");
+        //Focus
+        out.println("All the team start to focus. (All do the same method)");
 
-        for(SeleccionFutbol integrante : integrantes){
-            out.print(integrante.getNombre() + " "+integrante.getApellidos()+" -> ");
-            integrante.concentrarse();
+        for(FutbolTeam member : team){
+            out.print(member.getName() + " "+member.getLastName()+" -> ");
+            member.focus();
         }
 
         // VIAJE
-        out.println("\nTodos los integrantes viajan para jugar un partido. (Todos ejecutan el mismo método)");
-        for (SeleccionFutbol integrante : integrantes) {
-            out.print(integrante.getNombre()+" "+integrante.getApellidos()+" -> ");
-            integrante.viajar();
+        out.println("\nAll the member start to travel for being at the soccer match. (All do the same method)");
+        for (FutbolTeam member : team) {
+            out.print(member.getName()+" "+member.getLastName()+" -> ");
+            member.travel();
         }
 
         // ENTRENAMIENTO
-        out.println("\nEntrenamiento: Solamente el entrenador y el futbolista tiene metodos para entrenar:");
-        out.print(delBosque.getNombre()+" "+delBosque.getApellidos()+" -> ");
-        delBosque.dirigirEntrenamiento();
-        out.print(iniesta.getNombre()+" "+iniesta.getApellidos()+" -> ");
-        iniesta.entrenar();
+        out.println("\nTrainment: Just the coach y and the soccer player can execute this method:");
+        out.print(delBosque.getName()+" "+delBosque.getLastName()+" -> ");
+        delBosque.driveTheTrainment();
+        out.print(iniesta.getName()+" "+iniesta.getLastName()+" -> ");
+        iniesta.totrain();
 
         // MASAJE
-        out.println("\nMasaje: Solo el masajista tiene el método para dar un masaje:");
-        out.print(raulMartinez.getNombre()+" "+raulMartinez.getApellidos()+" -> ");
-        raulMartinez.darMasaje();
+        out.println("\nMassage: Just the massage guy can give a massage:");
+        out.print(raulMartinez.getName()+" "+raulMartinez.getLastName()+" -> ");
+        raulMartinez.giveAMassage();
 
         // PARTIDO DE FUTBOL
-        out.println("\nPartido de Fútbol: Solamente el entrenador y el futbolista tiene metodos para el partido de fútbol:");
-        out.print(delBosque.getNombre()+" "+delBosque.getApellidos()+" -> ");
-        delBosque.dirigirPartido();
-        out.print(iniesta.getNombre()+" "+iniesta.getApellidos()+" -> ");
-        iniesta.jugarPartido();
+        out.println("\nFutbol Match: Just the trainery and the soccer player can execute this methods:");
+        out.print(delBosque.getName()+" "+delBosque.getLastName()+" -> ");
+        delBosque.driveTheMatch();
+        out.print(iniesta.getName()+" "+iniesta.getLastName()+" -> ");
+        iniesta.playTheMatch();
 
-        //  ENTRENAMIENTO
-        for (SeleccionFutbol jugador: integrantes) {
-            jugador.entrenamiento();
+        //  ENTRENAMIENTO (POLIMORFISM)
+        for (FutbolTeam player: team) {
+            player.training();
         }
 
     }
